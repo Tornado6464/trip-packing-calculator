@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 bool waterFunction()
 {
@@ -95,9 +96,9 @@ bool gymFunction()
 int main()
 {
     std::cout << "How many days will you be away for?" << std::endl;
-    int days{};
+    double days{};
     std::cin >> days;
-    int nights{};
+    double nights{};
     nights = days - 1;
 
     bool waterVar{ waterFunction() };
@@ -106,9 +107,9 @@ int main()
 
     std::cout << "\nYou should pack:" << std::endl;
     std:: cout << days << " normal outfits" << std::endl;
-    if (nights > 13)
+    if (nights > 7)
     {
-        std::cout << std::ceil(nights/7) << " sets of PJ's" << std::endl;
+        std::cout << std::ceil(nights / 7) << " sets of PJ's" << std::endl;
     }
     else if (nights <= 7)
     {
