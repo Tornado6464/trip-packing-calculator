@@ -142,24 +142,22 @@ int main()
         if (days >= 7)
         {
             std::cout << "7 normal outfits" << std::endl;
+            std::cout << "1 set of PJ's" << std::endl;
         }
         else if (days < 7)
         {
-            std::cout << days << " normal outfits" << std::endl;
-        }
-        else if (days == 1)
-        {
+            std::cout << days << " normal outfit(s)" << std::endl;
             std::cout << "1 set of PJ's" << std::endl;
         }
         if (waterVar == true)
         {
-            if (nights > 1)
+            if (nights >= 7)
             {
-                std::cout << nights << " sets of swim wear" << std::endl;
+                std::cout << "7 sets of swim wear" << std::endl;
             }
-            else if (nights == 1)
+            else if (nights < 7)
             {
-                std::cout << "1 set of swim wear" << std::endl;
+                std::cout << nights << " set(s) of swim wear" << std::endl;
             }
         }
         if (formalVar == true)
@@ -171,56 +169,35 @@ int main()
         }
         if (gymVar == true)
         {
-            if (nights > 1)
+            if (nights >= 7)
             {
                 std::cout << "1 set of gym wear" << std::endl;
             }
-            if (nights >= 2)
+            if (nights < 7)
             {
-                std::cout << nights << " sets of gym wear" << std::endl;
+                std::cout << nights << " set(s) of gym wear" << std::endl;
             }
         }
     }
 
     else if (washerVar == false)
     {
-        std::cout << days << " normal outfits" << std::endl;
-        if (nights > 7)
-        {
-            std::cout << std::ceil(nights / 7) << " sets of PJ's" << std::endl;
-        }
-        else if (nights <= 7)
-        {
-            std::cout << "1 set of PJ's" << std::endl;
-        }
+        std::cout << days << " normal outfit(s)" << std::endl;
+        std::cout << std::ceil(nights / 7) << " set(s) of PJ's" << std::endl;
         if (waterVar == true)
         {
-            if (nights > 1)
-            {
-                std::cout << nights << " sets of swim wear" << std::endl;
-            }
-            else if (nights == 1)
-            {
-                std::cout << "1 set of swim wear" << std::endl;
-            }
+            std::cout << nights << " set(s) of swim wear" << std::endl;
         }
         if (formalVar == true)
         {
             std::cout << "1 suit" << std::endl;
             std::cout << "1 set of formal shoes" << std::endl;
-            std::cout << "1 tie" << std::endl;
+            std::cout << "1 tie or bow tie" << std::endl;
             std::cout << "1 formal belt" << std::endl;
         }
         if (gymVar == true)
         {
-            if (nights > 1)
-            {
-                std::cout << "1 set of gym wear" << std::endl;
-            }
-            if (nights >= 2)
-            {
-                std::cout << nights << " sets of gym wear" << std::endl;
-            }
+                std::cout << nights << " set(s) of gym wear" << std::endl;
         }
     }
 }
