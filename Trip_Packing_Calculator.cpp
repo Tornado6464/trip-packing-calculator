@@ -125,9 +125,9 @@ bool washerFunction()
 int main()
 {
     std::cout << "How many days will you be away for?" << std::endl;
-    double days{};
+    int days{};
     std::cin >> days;
-    double nights{};
+    int nights{};
     nights = days - 1;
 
     bool waterVar{ waterFunction() };
