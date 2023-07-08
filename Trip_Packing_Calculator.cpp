@@ -2,7 +2,7 @@
 #include <string>
 #include <cmath>
 
-bool waterFunction()
+bool waterFunction() //Asks the user if they want to pack swim wear
 {
     std::cout << "Will you need swim wear? (y/N)" << std::endl;
     std::string swimWearString{};
@@ -32,7 +32,7 @@ bool waterFunction()
     return swimWear;
 }
 
-bool formalFunction()
+bool formalFunction() //Asks the user if they want to pack a formal outfit
 {
     std::cout << "Will you need formal attire (eg. suit)? (y/N)" << std::endl;
     std::string formalString{};
@@ -62,7 +62,7 @@ bool formalFunction()
     return formal;
 }
 
-bool gymFunction()
+bool gymFunction() //Asks the user if they want to pack gym clothes
 {
     std::cout << "Will you go to the gym when you are away? (y/N)" << std::endl;
     std::string gymString{};
@@ -92,7 +92,7 @@ bool gymFunction()
     return gym;
 }
 
-bool washerFunction()
+bool washerFunction() //Asks the user if they will be able to wash clothes to minimize packing requirements
 {
     std::cout << "Will you have access to a washer when you are away? (y/N)" << std::endl;
     std::string washerString{};
@@ -128,7 +128,7 @@ int main()
     int days{};
     std::cin >> days;
     int nights{};
-    nights = days - 1;
+    nights = days - 1; //Usually the number of nights that you are gone for is the amount of "days - 1" due to travel time
 
     bool waterVar{ waterFunction() };
     bool formalVar{ formalFunction() };
