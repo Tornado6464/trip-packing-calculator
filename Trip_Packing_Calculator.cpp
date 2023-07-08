@@ -200,4 +200,12 @@ int main()
                 std::cout << nights << " set(s) of gym wear" << std::endl;
         }
     }
+    std::cout << "Toothbrush(s)" << std::endl;
+    std::cout << "Toothpaste(s)" << std::endl;
+    std::cout << "Dental floss(s)" << std::endl;
+    std::cout << "Shaving cream(s)" << std::endl;
+    std::cout << "Razor(s)" << std::endl;
+    std::cout << "Deodorant(s)" << std::endl;
+    std::cout << "Body soap(s)" << std::endl;
+    std::cout << "Shampoo(s)" << std::endl;
 }
