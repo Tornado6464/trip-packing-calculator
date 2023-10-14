@@ -20,23 +20,15 @@ bool waterFunction() //Asks the user if they want to pack swim wear
     std::string swimWearString{};
     std::cin >> swimWearString;
     bool swimWear{};
-    if (swimWearString == "Y")
+    if (swimWearString == "Y" or swimWearString == "y")
     {
         swimWear = 1;
     }
-    if (swimWearString == "y")
-    {
-        swimWear = 1;
-    }
-    if (swimWearString == "N")
+    else if (swimWearString == "N" or swimWearString == "n")
     {
         swimWear = 0;
     }
-    if (swimWearString == "n")
-    {
-        swimWear = 0;
-    }
-    else if (swimWearString != "y")
+    else if (swimWearString != "N" or swimWearString != "n" or swimWearString != "Y" or swimWearString != "y")
     {
         std::cout << "Please input either \"Y\" or \"N\"" << std::endl;
         waterFunction();
@@ -50,23 +42,15 @@ bool formalFunction() //Asks the user if they want to pack a formal outfit
     std::string formalString{};
     std::cin >> formalString;
     bool formal{};
-    if (formalString == "Y")
+    if (formalString == "Y" or formalString == "y")
     {
         formal = 1;
     }
-    if (formalString == "y")
-    {
-        formal = 1;
-    }
-    if (formalString == "N")
+    else if (formalString == "N" or formalString == "n")
     {
         formal = 0;
     }
-    if (formalString == "n")
-    {
-        formal = 0;
-    }
-    else if (formalString != "y")
+    else if (formalString != "N" or formalString != "n" or formalString != "Y" or formalString != "y")
     {
         std::cout << "Please input either \"Y\" or \"N\"" << std::endl;
         formalFunction();
@@ -80,23 +64,15 @@ bool gymFunction() //Asks the user if they want to pack gym clothes
     std::string gymString{};
     std::cin >> gymString;
     bool gym{};
-    if (gymString == "Y")
+    if (gymString == "Y" or gymString == "y")
     {
         gym = 1;
     }
-    if (gymString == "y")
-    {
-        gym = 1;
-    }
-    if (gymString == "N")
+    else if (gymString == "N" or gymString == "n")
     {
         gym = 0;
     }
-    if (gymString == "n")
-    {
-        gym = 0;
-    }
-    else if (gymString != "y")
+    else if (gymString != "N" or gymString != "n" or gymString != "Y" or gymString != "y")
     {
         std::cout << "Please input either \"Y\" or \"N\"" << std::endl;
         gymFunction();
@@ -110,23 +86,15 @@ bool washerFunction() //Asks the user if they will be able to wash clothes to mi
     std::string washerString{};
     std::cin >> washerString;
     bool washer{};
-    if (washerString == "Y")
+    if (washerString == "Y" or washerString == "y")
     {
         washer = 1;
     }
-    if (washerString == "y")
-    {
-        washer = 1;
-    }
-    if (washerString == "N")
+    else if (washerString == "N" or washerString == "n")
     {
         washer = 0;
     }
-    if (washerString == "n")
-    {
-        washer = 0;
-    }
-    else if (washerString != "y")
+    else if (washerString != "N" or washerString != "n" or washerString != "Y" or washerString != "y")
     {
         std::cout << "Please input either \"Y\" or \"N\"" << std::endl;
         washerFunction();
@@ -136,11 +104,10 @@ bool washerFunction() //Asks the user if they will be able to wash clothes to mi
 
 int main()
 {
+    std::string version{"v1.0.0"};
+
     std::cout << "Trip Packing Calculator" << std::endl;
-    std::cout << "Created by Tyler Davis" << std::endl;
-    std::cout << "Version 0.1.1" << std::endl;
-    std::cout << "" << std::endl;
-    std::cout << "Provided under the MIT license, found at https://gitea.tylerdavis.org/tyler/Trip_Packing_Calculator/src/branch/main/LICENSE" << std::endl;
+    std::cout << "You are using " << version << std::endl;
     std::cout << "" << std::endl;
     std::cout << "" << std::endl;
 
@@ -229,5 +196,8 @@ int main()
     std::cout << "Deodorant(s)" << std::endl;
     std::cout << "Body soap(s)" << std::endl;
     std::cout << "Shampoo(s)" << std::endl;
+    std::cout << "Press enter to escape" << std::endl;
+    int escape{0};
+    std::cin >> escape;
     return 0;
 }
