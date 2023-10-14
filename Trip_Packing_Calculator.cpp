@@ -13,6 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <algorithm>
 
 bool waterFunction() //Asks the user if they want to pack swim wear
 {
@@ -110,8 +111,6 @@ int main()
     std::cout << "You are using " << version << std::endl;
     std::cout << "" << std::endl;
     std::cout << "" << std::endl;
-
-
     std::cout << "How many days will you be away for?" << std::endl;
     int days{};
     std::cin >> days;
@@ -196,8 +195,7 @@ int main()
     std::cout << "Deodorant(s)" << std::endl;
     std::cout << "Body soap(s)" << std::endl;
     std::cout << "Shampoo(s)" << std::endl;
-    std::cout << "Press enter to escape" << std::endl;
-    int escape{0};
-    std::cin >> escape;
+    char hold;
+    std::cin >> hold;
     return 0;
 }
