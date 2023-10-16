@@ -193,6 +193,7 @@ int main()
     std::cout << "Shaving cream(s)" << std::endl;
     std::cout << "Razor(s)" << std::endl;
     std::cout << "Deodorant(s)" << std::endl;
+    std::cout << "Cologne" << std::endl;
     std::cout << "Body soap(s)" << std::endl;
     std::cout << "Shampoo(s)" << std::endl;
     char hold;
