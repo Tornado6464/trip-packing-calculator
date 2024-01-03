@@ -2,11 +2,18 @@ import math
 
 version = "v0.2.0"
 
+def daysFunction():
+    while True:
+        try:
+            days = int(input("How many days will you be away for?\n"))
+            return days
+        except ValueError:
+            print("Please enter an integer.")
 def waterFunction():
     swimWear = input("Will you need swim wear? (y/N)\n")
     if swimWear == "y" or swimWear == "Y":
         return 1
-    elif swimWear == "n" or swimWear == "N":
+    elif swimWear == "n" or swimWear == "N" or swimWear == "":
         return 0
     else:
         print("Make sure to input a Y or an N")
@@ -15,7 +22,7 @@ def formalFunction():
     formalWear = input("Will you need formal attire (eg. a suit)? (y/N)\n")
     if formalWear == "y" or formalWear == "Y":
         return 1
-    elif formalWear == "n" or formalWear == "N":
+    elif formalWear == "n" or formalWear == "N" or formalWear == "":
         return 0
     else:
         print("Make sure to input a Y or an N")
@@ -24,7 +31,7 @@ def gymFunction():
     gymWear = input("Will you go to the gym when you are away? (y/N)\n")
     if gymWear == "y" or gymWear == "Y":
         return 1
-    elif gymWear == "n" or gymWear == "N":
+    elif gymWear == "n" or gymWear == "N" or gymWear == "":
         return 0
     else:
         print("Make sure to input a Y or an N")
@@ -33,7 +40,7 @@ def washerFunction():
     washerString = input("Will you have access to a washer when you are away? (y/N)\n")
     if washerString == "y" or washerString == "Y":
         return 1
-    elif washerString == "n" or washerString == "N":
+    elif washerString == "n" or washerString == "N" or washerString == "":
         return 0
     else:
         print("Make sure to input a Y or an N")
@@ -43,7 +50,8 @@ print("Trip Packing Calculator\n")
 print("You are using", version)
 print()
 print()
-days = int(input("How many days will you be away for?\n"))
+days = daysFunction()
+
 nights = days - 1
 
 waterVar = waterFunction()
