@@ -133,6 +133,7 @@ with open(outputFileName, "w+") as f:
     print("Cologne", file=f)
     print("Body soap(s)", file=f)
     print("Shampoo(s)", file=f)
+    print("Sunglasses", file=f)
     f.close
 with open(outputFileName, "r") as f:
     print(f.read())
